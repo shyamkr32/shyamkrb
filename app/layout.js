@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/navbar";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 const geistSans = Geist({
@@ -26,10 +28,10 @@ export default function RootLayout({ children }) {
       >
         <div className="text-white ">
           <Navbar />
-         
+
           {children}
-          
-          
+          <Analytics />
+          <SpeedInsights />
         </div>
       </body>
     </html>
